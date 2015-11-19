@@ -3,7 +3,16 @@ using namespace std;
 using namespace sf;
 using namespace kg;
 
-kg::AlphabetConverter::RestklassenVec kg::AlphabetConverter::TextToRestklassenArray( const std::string& str ) const
+const std::string kg::StandartAlphabetConverter::ALPHABET_RAW = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+const std::vector<char> kg::StandartAlphabetConverter::ALPHABET = vector<char>( ALPHABET_RAW.begin(), ALPHABET_RAW.end() );
+const unsigned int kg::StandartAlphabetConverter::ALPHABET_SIZE = ALPHABET.size();
+
+unsigned int kg::StandartAlphabetConverter::getAlphabetSize() const
+{
+	return ALPHABET_SIZE;
+}
+
+std::vector<Restklasse> kg::StandartAlphabetConverter::TextToRestklassenArray( const std::string& str ) const
 {
 	std::vector<Restklasse> retVal;
 
@@ -13,7 +22,7 @@ kg::AlphabetConverter::RestklassenVec kg::AlphabetConverter::TextToRestklassenAr
 	return retVal;
 }
 
-std::string kg::AlphabetConverter::RestklassenArrayToString( const RestklassenVec& vec ) const
+std::string kg::StandartAlphabetConverter::RestklassenArrayToString( const std::vector<Restklasse>& vec ) const
 {
 	std::string retVal;
 

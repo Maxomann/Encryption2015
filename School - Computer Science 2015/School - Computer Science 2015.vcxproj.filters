@@ -39,6 +39,12 @@
     <ClCompile Include="AlphabetConverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VigenereCrypter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CaesarCrypter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -66,6 +72,9 @@
       <Filter>Header Files\Crypter</Filter>
     </ClInclude>
     <ClInclude Include="AlphabetConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CaesarCrypter.h">
       <Filter>Header Files\Crypter</Filter>
     </ClInclude>
   </ItemGroup>

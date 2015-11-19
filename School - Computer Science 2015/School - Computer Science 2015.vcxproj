@@ -127,15 +127,18 @@
     <ClCompile Include="Algorithm.cpp" />
     <ClCompile Include="AppCaesar.cpp" />
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="CaesarCrypter.cpp" />
     <ClCompile Include="Crypter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Restklasse.cpp" />
     <ClCompile Include="AlphabetConverter.cpp" />
+    <ClCompile Include="VigenereCrypter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithm.h" />
     <ClInclude Include="AppCaesar.h" />
     <ClInclude Include="Application.h" />
+    <ClInclude Include="CaesarCrypter.h" />
     <ClInclude Include="SymmetricCrypter.h" />
     <ClInclude Include="AlphabetConverter.h" />
     <ClInclude Include="VigenereCrypter.h" />

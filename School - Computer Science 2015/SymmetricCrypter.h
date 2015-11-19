@@ -5,9 +5,33 @@
 namespace kg
 {
 	template<class KeyType>
-	class SymmetricCrypter : public Crypter
+	class SymmetricCrypter : public Crypter<KeyType, KeyType>
 	{
-	protected:
+	public:
+		SymmetricCrypter( const std::shared_ptr<AlphabetConverter>& alphabetConverter )
+			: Crypter<KeyType, KeyType>( alphabetConverter )
+		{ };
+
 		virtual KeyType getInverseKey( const KeyType& key )const = 0;
+
+		//apply key
+		virtual std::vector<Restklasse> encrypt( const KeyType& key, const std::vector<Restklasse>& input ) override = 0;
+
+		//apply inverse key
+		//decrypt(Key) = encrypt(getInverseKey(Key))
+		virtual std::vector<Restklasse> decrypt( const KeyType& key, const std::vector<Restklasse>& input ) override = 0;
+	};
+
+	template<>
+	class SymmetricCrypter<void> : public Crypter<void, void>
+	{
+	public:
+		SymmetricCrypter( const std::shared_ptr<AlphabetConverter>& alphabetConverter )
+			: Crypter<void, void>( alphabetConverter )
+		{ };
+
+		virtual std::vector<Restklasse> encrypt( const std::vector<Restklasse>& input ) override = 0;
+
+		virtual std::vector<Restklasse> decrypt( const std::vector<Restklasse>& input ) override = 0;
 	};
 }

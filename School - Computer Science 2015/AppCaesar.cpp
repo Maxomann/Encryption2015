@@ -3,6 +3,8 @@ using namespace std;
 using namespace sf;
 using namespace tgui;
 
+void kg::AppCaesar::m_inputChanged( const std::string& val )
+{ }
 
 void kg::AppCaesar::init()
 {

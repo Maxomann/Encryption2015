@@ -18,6 +18,12 @@ namespace kg
 		Restklasse( Val value, Val mod );
 
 		const Val& getSmallestIntegerRepresentation()const;
+		const Val& getModulo()const;
 
+		// Math operators
+		Restklasse operator+( const Restklasse& rhs )const;
+		Restklasse operator-( const Restklasse& rhs )const;
+		Restklasse operator*( const Restklasse& rhs )const;
+		Restklasse operator*( const int& integer )const;
 	};
 }
