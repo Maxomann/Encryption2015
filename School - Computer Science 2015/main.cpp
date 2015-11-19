@@ -1,37 +1,23 @@
 #include "stdafx.h"
+#include "Restklasse.h"
+#include "Algorithm.h"
+#include "Application.h"
+#include "AppCaesar.h"
+#include "Crypter.h"
+
 using namespace std;
 using namespace sf;
 using namespace tgui;
+using namespace kg;
 
 int main()
 {
-	RenderWindow window( VideoMode( 800, 600 ), "Informatik Projekt" );
-	Gui gui( window );
-
-	gui.setFont( "Data/DejaVuSans.ttf" );
+	std::shared_ptr<Application> app = make_shared<AppCaesar>();
+	app->init();
 
 	try
 	{
-		//application
-		while( window.isOpen() )
-		{
-			sf::Event event;
-			while( window.pollEvent( event ) )
-			{
-				if( event.type == sf::Event::Closed )
-					window.close();
-
-				// Pass the event to all the widgets
-				gui.handleEvent( event );
-			}
-
-			window.clear();
-
-			// Draw all created widgets
-			gui.draw();
-
-			window.display();
-		}
+		app->run();
 	}
 	catch( const std::exception& e )
 	{

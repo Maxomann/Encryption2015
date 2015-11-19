@@ -1,6 +1,9 @@
 #pragma once
 
 #include <iostream>
+#include <tuple>
+#include <memory>
+#include <string>
 
 #include<SFML/Audio.hpp>
 #include<SFML/Graphics.hpp>
