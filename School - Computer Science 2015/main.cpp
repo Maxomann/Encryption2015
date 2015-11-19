@@ -12,7 +12,7 @@ using namespace kg;
 
 int main()
 {
-	std::shared_ptr<Application> app = make_shared<AppCaesar>();
+	shared_ptr<Application> app = make_shared<AppCaesar>();
 	app->init();
 
 	try

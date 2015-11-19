@@ -41,7 +41,7 @@ kg::Restklasse kg::Restklasse::operator-( const Restklasse& rhs )const
 
 kg::Restklasse kg::Restklasse::operator-( const int& integer ) const
 {
-	return Restklasse( m_smallestIntegerRepresentation + integer, m_mod );
+	return Restklasse( m_smallestIntegerRepresentation - integer, m_mod );
 }
 
 kg::Restklasse kg::Restklasse::operator*( const Restklasse& rhs )const

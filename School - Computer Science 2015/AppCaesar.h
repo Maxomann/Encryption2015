@@ -9,7 +9,7 @@ namespace kg
 	{
 		tgui::Label::Ptr m_caesarLabel;
 		tgui::TextBox::Ptr m_caesarInput;
-		tgui::Label::Ptr m_caesarOutput;
+		tgui::TextBox::Ptr m_caesarOutput;
 
 		std::unique_ptr<AlphabetConverter> m_alphabetConverter = std::make_unique<StandartAlphabetConverter>();
 		CaesarCrypter m_caesarCrypter;
