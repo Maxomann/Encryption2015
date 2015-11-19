@@ -1,5 +1,7 @@
 #pragma once
 #include "Application.h"
+#include "CaesarCrypter.h"
+#include "AlphabetConverter.h"
 
 namespace kg
 {
@@ -9,10 +11,12 @@ namespace kg
 		tgui::TextBox::Ptr m_caesarInput;
 		tgui::Label::Ptr m_caesarOutput;
 
-		void m_inputChanged( const std::string& val );
+		std::unique_ptr<AlphabetConverter> m_alphabetConverter = std::make_unique<StandartAlphabetConverter>();
+		CaesarCrypter m_caesarCrypter;
+
+		void m_inputChanged();
 
 	public:
 		virtual void init() override;
-
 	};
 }

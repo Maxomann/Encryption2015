@@ -22,8 +22,10 @@ namespace kg
 
 		// Math operators
 		Restklasse operator+( const Restklasse& rhs )const;
+		Restklasse operator+( const int& integer )const;//integer will be converted to Restklasse( integer, this->m_mod )
 		Restklasse operator-( const Restklasse& rhs )const;
+		Restklasse operator-( const int& integer )const;//integer will be converted to Restklasse( integer, this->m_mod )
 		Restklasse operator*( const Restklasse& rhs )const;
-		Restklasse operator*( const int& integer )const;
+		Restklasse operator*( const int& integer )const;//integer will be converted to Restklasse( integer, this->m_mod )
 	};
 }

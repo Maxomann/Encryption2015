@@ -7,7 +7,6 @@ namespace kg
 	class VigenereCrypter : public SymmetricCrypter<std::vector<Restklasse>>
 	{
 	public:
-		VigenereCrypter( const std::shared_ptr<AlphabetConverter>& alphabetConverter );
 
 		virtual std::vector<Restklasse> getInverseKey( const std::vector<Restklasse>& key ) const override;
 

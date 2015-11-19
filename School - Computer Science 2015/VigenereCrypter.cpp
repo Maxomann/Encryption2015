@@ -5,10 +5,6 @@ using namespace tgui;
 
 namespace kg
 {
-	VigenereCrypter::VigenereCrypter( const std::shared_ptr<AlphabetConverter>& alphabetConverter )
-		:SymmetricCrypter<std::vector<Restklasse>>( alphabetConverter )
-	{ }
-
 	std::vector<Restklasse> VigenereCrypter::getInverseKey( const std::vector<Restklasse>& key ) const
 	{
 		std::vector<Restklasse> retVal;

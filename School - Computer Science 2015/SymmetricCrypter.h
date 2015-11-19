@@ -8,10 +8,6 @@ namespace kg
 	class SymmetricCrypter : public Crypter<KeyType, KeyType>
 	{
 	public:
-		SymmetricCrypter( const std::shared_ptr<AlphabetConverter>& alphabetConverter )
-			: Crypter<KeyType, KeyType>( alphabetConverter )
-		{ };
-
 		virtual KeyType getInverseKey( const KeyType& key )const = 0;
 
 		//apply key
@@ -26,10 +22,6 @@ namespace kg
 	class SymmetricCrypter<void> : public Crypter<void, void>
 	{
 	public:
-		SymmetricCrypter( const std::shared_ptr<AlphabetConverter>& alphabetConverter )
-			: Crypter<void, void>( alphabetConverter )
-		{ };
-
 		virtual std::vector<Restklasse> encrypt( const std::vector<Restklasse>& input ) override = 0;
 
 		virtual std::vector<Restklasse> decrypt( const std::vector<Restklasse>& input ) override = 0;

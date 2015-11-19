@@ -26,12 +26,22 @@ kg::Restklasse kg::Restklasse::operator+( const Restklasse& rhs )const
 	return Restklasse( m_smallestIntegerRepresentation + rhs.m_smallestIntegerRepresentation, m_mod );
 }
 
+kg::Restklasse kg::Restklasse::operator+( const int& integer ) const
+{
+	return Restklasse( m_smallestIntegerRepresentation + integer, m_mod );
+}
+
 kg::Restklasse kg::Restklasse::operator-( const Restklasse& rhs )const
 {
 	if( m_mod != rhs.m_mod )
 		throw std::exception( "Cannot apply math to two Restklassen of different modulo" );
 
 	return Restklasse( m_smallestIntegerRepresentation - rhs.m_smallestIntegerRepresentation, m_mod );
+}
+
+kg::Restklasse kg::Restklasse::operator-( const int& integer ) const
+{
+	return Restklasse( m_smallestIntegerRepresentation + integer, m_mod );
 }
 
 kg::Restklasse kg::Restklasse::operator*( const Restklasse& rhs )const

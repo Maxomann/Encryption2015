@@ -3,8 +3,21 @@ using namespace std;
 using namespace sf;
 using namespace tgui;
 
-void kg::AppCaesar::m_inputChanged( const std::string& val )
-{ }
+void kg::AppCaesar::m_inputChanged()
+{
+	auto val = m_caesarInput->getText();
+
+	//TODO: catch wrong input
+	auto inputConverted = m_alphabetConverter->TextToRestklassenArray( val );
+
+	auto encrypted = m_caesarCrypter.encrypt( inputConverted );
+	auto decrypted = m_caesarCrypter.decrypt( encrypted );
+
+	auto encryptedAsText = m_alphabetConverter->RestklassenArrayToString( encrypted );
+	auto decryptedAsText = m_alphabetConverter->RestklassenArrayToString( decrypted );
+
+	m_caesarOutput->setText( encryptedAsText + " --- " + decryptedAsText );
+}
 
 void kg::AppCaesar::init()
 {
@@ -15,6 +28,7 @@ void kg::AppCaesar::init()
 	m_caesarLabel->setText( "Caesar Encryption" );
 
 	m_caesarInput->setPosition( 0, 50 );
+	m_caesarInput->connect( "TextChanged", &AppCaesar::m_inputChanged, this );
 
 	m_caesarOutput->setText( "###" );
 	m_caesarOutput->setPosition( 0, 300 );

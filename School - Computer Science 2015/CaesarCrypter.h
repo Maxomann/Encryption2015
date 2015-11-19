@@ -6,12 +6,13 @@ namespace kg
 {
 	class CaesarCrypter : public SymmetricCrypter<void>
 	{
-		const Restklasse m_key;
+	public:
+		static const unsigned int KEY = 3;
 
+	private:
 		VigenereCrypter m_vigenereCrypter;
 
 	public:
-		CaesarCrypter( const std::shared_ptr<AlphabetConverter>& alphabetConverter );
 
 		virtual std::vector<Restklasse> encrypt( const std::vector<Restklasse>& input ) override;
 		virtual std::vector<Restklasse> decrypt( const std::vector<Restklasse>& input ) override;
