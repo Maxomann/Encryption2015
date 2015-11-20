@@ -1,18 +1,19 @@
 #pragma once
 #include "Application.h"
-#include "CaesarCrypter.h"
+#include "VigenereCrypter.h"
 #include "AlphabetConverter.h"
 
 namespace kg
 {
-	class AppCaesar : public Application
+	class AppVigenere : public Application
 	{
 		std::unique_ptr<AlphabetConverter> m_alphabetConverter = std::make_unique<StandartAlphabetConverter>();
-		CaesarCrypter m_caesarCrypter;
+		VigenereCrypter m_vigenereCrypter;
 
-		tgui::Label::Ptr m_caesarLabel;
-		tgui::TextBox::Ptr m_caesarInput;
-		tgui::TextBox::Ptr m_caesarOutput;
+		tgui::Label::Ptr m_vigenereLabel;
+		tgui::TextBox::Ptr m_vigenereInput;
+		tgui::TextBox::Ptr m_vigenereKeyInput;
+		tgui::TextBox::Ptr m_vigenereOutput;
 
 		void m_inputChanged();
 

@@ -14,6 +14,8 @@ unsigned int kg::StandartAlphabetConverter::getAlphabetSize() const
 
 std::vector<Restklasse> kg::StandartAlphabetConverter::TextToRestklassenArray( const std::string& str ) const
 {
+	//TODO: Thow exception if char not found
+
 	std::vector<Restklasse> retVal;
 
 	for( const auto& ch : str )
@@ -24,6 +26,8 @@ std::vector<Restklasse> kg::StandartAlphabetConverter::TextToRestklassenArray( c
 
 std::string kg::StandartAlphabetConverter::RestklassenArrayToString( const std::vector<Restklasse>& vec ) const
 {
+	//TODO: Thow exception if number not found or el.modulo!=ALPHABET_SIZE
+
 	std::string retVal;
 
 	for( const auto& el : vec )

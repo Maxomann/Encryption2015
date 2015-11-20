@@ -16,6 +16,9 @@
     <Filter Include="Header Files\Crypter">
       <UniqueIdentifier>{741d60f1-dd92-404a-93de-1b4310dafa39}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Apps">
+      <UniqueIdentifier>{b92cd87e-6509-41de-bc13-24601fd8c340}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -30,9 +33,6 @@
     <ClCompile Include="Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AppCaesar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Crypter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -43,6 +43,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CaesarCrypter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppCaesar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppVigenere.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,9 +65,6 @@
     <ClInclude Include="Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AppCaesar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Crypter.h">
       <Filter>Header Files\Crypter</Filter>
     </ClInclude>
@@ -76,6 +79,12 @@
     </ClInclude>
     <ClInclude Include="CaesarCrypter.h">
       <Filter>Header Files\Crypter</Filter>
+    </ClInclude>
+    <ClInclude Include="AppCaesar.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="AppVigenere.h">
+      <Filter>Header Files\Apps</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

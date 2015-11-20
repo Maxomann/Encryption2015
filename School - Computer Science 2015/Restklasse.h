@@ -3,6 +3,10 @@
 
 namespace kg
 {
+	/*
+		TODO: Use Restklassen Template for modulo.
+		So Restklasse<7> would be modulo 7
+	*/
 	class Restklasse
 	{
 	public:

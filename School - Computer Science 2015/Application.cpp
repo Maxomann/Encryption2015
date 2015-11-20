@@ -4,7 +4,6 @@ using namespace sf;
 
 namespace kg
 {
-
 	Application::Application()
 		: m_window( VideoMode( 800, 600 ), "Informatik Projekt" ),
 		m_gui( m_window )
@@ -29,7 +28,7 @@ namespace kg
 				m_gui.handleEvent( event );
 			}
 
-			m_window.clear();
+			m_window.clear( Color::Green );
 
 			// Draw all created widgets
 			m_gui.draw();

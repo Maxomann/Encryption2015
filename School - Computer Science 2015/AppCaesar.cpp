@@ -28,6 +28,7 @@ void kg::AppCaesar::init()
 	m_caesarLabel->setText( "Caesar Encryption" );
 
 	m_caesarInput->setPosition( 0, 50 );
+	m_caesarInput->setText( "Input" );
 	m_caesarInput->connect( "TextChanged", &AppCaesar::m_inputChanged, this );
 
 	m_caesarOutput->setReadOnly( true );
