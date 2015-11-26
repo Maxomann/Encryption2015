@@ -8,6 +8,8 @@ namespace kg
 		: m_window( VideoMode( 800, 600 ), "Informatik Projekt" ),
 		m_gui( m_window )
 	{
+		m_window.setVerticalSyncEnabled( true );
+
 		m_gui.setFont( "Data/DejaVuSans.ttf" );
 	}
 

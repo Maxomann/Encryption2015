@@ -62,9 +62,6 @@
     <ClInclude Include="Algorithm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Application.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Crypter.h">
       <Filter>Header Files\Crypter</Filter>
     </ClInclude>
@@ -84,6 +81,9 @@
       <Filter>Header Files\Apps</Filter>
     </ClInclude>
     <ClInclude Include="AppVigenere.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
       <Filter>Header Files\Apps</Filter>
     </ClInclude>
   </ItemGroup>
