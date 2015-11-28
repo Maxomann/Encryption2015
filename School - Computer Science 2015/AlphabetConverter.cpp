@@ -3,7 +3,7 @@ using namespace std;
 using namespace sf;
 using namespace kg;
 
-const std::string kg::StandartAlphabetConverter::ALPHABET_RAW = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+const std::string kg::StandartAlphabetConverter::ALPHABET_RAW = "0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 const std::vector<char> kg::StandartAlphabetConverter::ALPHABET = vector<char>( ALPHABET_RAW.begin(), ALPHABET_RAW.end() );
 const unsigned int kg::StandartAlphabetConverter::ALPHABET_SIZE = ALPHABET.size();
 
