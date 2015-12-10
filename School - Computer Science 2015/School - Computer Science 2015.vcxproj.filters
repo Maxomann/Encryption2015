@@ -51,6 +51,12 @@
     <ClCompile Include="AppVigenere.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MultiplyCrypter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppMultiply.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -84,6 +90,12 @@
       <Filter>Header Files\Apps</Filter>
     </ClInclude>
     <ClInclude Include="Application.h">
+      <Filter>Header Files\Apps</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiplyCrypter.h">
+      <Filter>Header Files\Crypter</Filter>
+    </ClInclude>
+    <ClInclude Include="AppMultiply.h">
       <Filter>Header Files\Apps</Filter>
     </ClInclude>
   </ItemGroup>
