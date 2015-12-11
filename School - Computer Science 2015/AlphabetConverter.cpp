@@ -14,24 +14,37 @@ unsigned int kg::StandartAlphabetConverter::getAlphabetSize() const
 
 std::vector<Restklasse> kg::StandartAlphabetConverter::TextToRestklassenArray( const std::string& str ) const
 {
-	//TODO: Thow exception if char not found
-
 	std::vector<Restklasse> retVal;
 
 	for( const auto& ch : str )
+	{
+		int index = ALPHABET_RAW.find( ch );
+		if( index == string::npos )
+			throw exception( "Character input does not exist in ALPHABET" );
 		retVal.push_back( Restklasse( ALPHABET_RAW.find( ch ), ALPHABET_SIZE ) );
+	}
 
 	return retVal;
 }
 
 std::string kg::StandartAlphabetConverter::RestklassenArrayToString( const std::vector<Restklasse>& vec ) const
 {
-	//TODO: Thow exception if number not found or el.modulo!=ALPHABET_SIZE
-
 	std::string retVal;
 
 	for( const auto& el : vec )
-		retVal.push_back( ALPHABET_RAW.at( el.getSmallestIntegerRepresentation() ) );
+	{
+		if( el.getModulo() != getAlphabetSize() )
+			throw exception( "Restklasse cannot be converted: Modulo!=ALPHABET_SIZE" );
+
+		try
+		{
+			retVal.push_back( ALPHABET_RAW.at( el.getSmallestIntegerRepresentation() ) );
+		}
+		catch( const std::exception& )
+		{
+			throw exception( "Restklasse.getSmallestIntegerRepresentation() does not exist in ALPHABET" );
+		}
+	}
 
 	return retVal;
 }
