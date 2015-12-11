@@ -16,9 +16,7 @@ using namespace kg;
 
 int main()
 {
-	bool terminate = false;
-
-	while( !terminate )
+	while( true )
 	{
 		cout << "Select encryption mode:\n0=Caesar\n1=Vigenere\n2=Multiply\nOther=Quit" << endl;
 		int mode;
@@ -38,7 +36,7 @@ int main()
 			app = make_shared<AppMultiply>();
 			break;
 		default:
-			terminate = true;
+			return 0;
 		}
 
 #ifndef _DEBUG

@@ -1,5 +1,13 @@
-HOW TO USE:
-	Start the application.exe and select the encryption/decryption mode you want to run
+ANLEITUNG:
+	Programm: Anwendung starten und verschlüssellung auswählen
+	Doku: Doku/html/index.html öffnen
+	
+HINWEISE:
+	- Dem Source Code liegt eine VisualStudio Projektmappe bei.
+	- Ich kann keine mac version kompilieren, weil ich keinen mac habe
+		(Sollten Sie ein Video davon haben wollen, schreiben Sie mir bitte eine Mail).
+	
+
 	
 USED LIBRARIES:
 	SFML (Graphics) - http://www.sfml-dev.org/

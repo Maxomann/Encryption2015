@@ -1,3 +1,9 @@
+/**
+ * @file stdafx.h
+ *
+ * standard header
+ */
+
 #pragma once
 
 #include <iostream>
